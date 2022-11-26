@@ -769,7 +769,12 @@ static const char *xkb_layouts[]  = {
 #endif // XKB_PATCH
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define SUPER Mod4Mask
+#define ALT Mod1Mask
+#define CTRL ControlMask
+#define SHIFT ShiftMask
+#define MODKEY SUPER
+
 #if COMBO_PATCH && SWAPTAGS_PATCH && TAGOTHERMONITOR_PATCH
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      comboview,      {.ui = 1 << TAG} }, \
