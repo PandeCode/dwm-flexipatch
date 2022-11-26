@@ -504,8 +504,50 @@ static const Rule rules[] = {
 	RULE(.wintype = WTYPE "UTILITY", .isfloating = 1)
 	RULE(.wintype = WTYPE "TOOLBAR", .isfloating = 1)
 	RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
-	RULE(.class = "Gimp", .tags = 1 << 4)
-	RULE(.class = "Firefox", .tags = 1 << 7)
+
+	RULE(.wintype = "_KDE_NET_WM_WINDOW_TYPE_OVERRIDE", .isfloating = 1)
+	RULE(.wintype = "_KDE_NET_WM_WINDOW_TYPE_OVERRIDE, _NET_WM_WINDOW_TYPE_NORMAL", .isfloating = 1)
+
+	RULE(.class = "Browser",         .tags = 1)
+	RULE(.class = "Firefox",         .tags = 1)
+	RULE(.class = "Google-chrome",   .tags = 1)
+	RULE(.class = "Opera",           .tags = 1)
+
+	RULE(.class = "St",              .tags = 2)
+	RULE(.class = "st",              .tags = 2)
+	RULE(.class = "terminal",        .tags = 2)
+	RULE(.class = "st-256color",     .tags = 2)
+
+	RULE(.class = "ModernGL",        .tags = 1<<2)
+	RULE(.class = "Emacs",           .tags = 1<<2)
+	RULE(.class = "emacs",           .tags = 1<<2)
+	RULE(.class = "neovide",         .tags = 1<<2)
+	RULE(.class = "Code",            .tags = 1<<2)
+	RULE(.class = "Code - Insiders", .tags = 1<<2)
+
+	RULE(.class = "hakuneko-desktop",.tags = 1 << 3)
+	RULE(.class = "Unity",           .tags = 1 << 3)
+	RULE(.class = "unityhub",        .tags = 1 << 3)
+	RULE(.class = "UnityHub",        .tags = 1 << 3)
+	RULE(.class = "zoom",            .tags = 1 << 3)
+
+	RULE(.class = "Spotify",         .tags = 1 << 4)
+	RULE(.class = "vlc",             .tags = 1 << 4)
+
+	RULE(.class = "Mail",            .tags = 1 << 5)
+	RULE(.class = "Thunderbird",     .tags = 1 << 5)
+
+	RULE(.class = "riotclientux.exe",.tags = 1 << 6)
+	RULE(.class = "leagueclient.exe",.tags = 1 << 6)
+	RULE(.class = "Zenity",          .tags = 1 << 6)
+	RULE(.class = "zenity",          .tags = 1 << 6)
+	RULE(.class = "wine",            .tags = 1 << 6)
+	RULE(.class = "wine.exe",        .tags = 1 << 6)
+	RULE(.class = "explorer.exe",     .tags = 1 << 6)
+
+	RULE(.class="vimb",               .isfloating = 1)
+	RULE(.title="Picture-in-picture",.tags =~0, .isfloating = 1)
+
 	#if RENAMED_SCRATCHPADS_PATCH
 	RULE(.instance = "spterm", .scratchkey = 's', .isfloating = 1)
 	#elif SCRATCHPADS_PATCH
