@@ -395,7 +395,14 @@ static const char *layoutmenu_cmd = "layoutmenu.sh";
 
 #if COOL_AUTOSTART_PATCH
 static const char *const autostart[] = {
-	"st", NULL,
+	"randbg", NULL,
+	"startdwmblocks", NULL,
+
+	"sh", "-c", "if [\"\" == \"$(pidof nm-applet)\"]; then nm-applet;                            fi", NULL,
+	"sh", "-c", "if [\"\" == \"$(pidof xflux)\"];     then xflux -l 0;                           fi", NULL,
+	"sh", "-c", "if [\"\" == \"$(pidof picom)\"];     then picom -b --experimental-backend;      fi", NULL,
+	"sh", "-c", "if [\"\" == \"$(pidof clipit)\"];    then clipit;                               fi", NULL,
+	"sh", "-c", "if [\"\" == \"$(pidof st)\"];        then st;                                   fi", NULL,
 	NULL /* terminate */
 };
 #endif // COOL_AUTOSTART_PATCH
