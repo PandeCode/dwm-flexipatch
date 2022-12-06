@@ -1,4 +1,5 @@
 /* See LICENSE file for copyright and license details. */
+#include <X11/XF86keysym.h>
 
 /* appearance */
 #if ROUNDED_CORNERS_PATCH
@@ -827,6 +828,7 @@ static const char *xkb_layouts[]  = {
 #define SUPER Mod4Mask
 #define ALT Mod1Mask
 #define CTRL ControlMask
+#define CONTROL ControlMask
 #define SHIFT ShiftMask
 #define MODKEY SUPER
 
@@ -962,8 +964,75 @@ static const Key on_empty_keys[] = {
 };
 #endif // ON_EMPTY_KEYS_PATCH
 
+
+
 static const Key keys[] = {
 	/* modifier                     key            function                argument */
+
+	    { MODKEY, XK_backslash, spawn, SHCMD("/home/shawn/dotfiles/scripts/xmonad/help.sh")}// Help
+
+    , { MODKEY, XK_v, spawn, SHCMD("rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'")}// Select from Green Clip and set as current clipboard value
+    ,   { MODKEY|SHIFT, XK_v,spawn , SHCMD("rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}' ; sleep 0.5; xdotool type $(xclip -o -selection clipboard)")} // Select from Green Clip and paste
+    ,   { MODKEY|CONTROL|SHIFT, XK_v,    spawn , SHCMD("pkill greenclip && greenclip clear && greenclip daemon & notify-send 'System' 'Greenclip Cleared' ;")}                        // Clear Green Clip
+
+    , { ALT,          XK_F4,                 killclient, {0} } // Alt F4, kill windwow
+    , { MODKEY|SHIFT, XK_l,                  spawn,      SHCMD("betterlockscreen -lock")}         // Lock WM
+    , { ALT,          XK_F2,                 spawn,      SHCMD("dmenu_run  -f -i -l 10 -p 'sh -c'")} // Dmenu launch program
+
+    , { MODKEY,       XK_Print,              spawn,      SHCMD("flameshot full -p $HOME/Pictures/Screenshots")}     // Full Screenshot
+    , { MODKEY|SHIFT,             XK_Print, spawn,      SHCMD("flameshot gui  -p $HOME/Pictures/Screenshots")} // Snip Screenshot
+    , { MODKEY, XK_z,      spawn,    SHCMD("eww open --toggle sidebar")}// Spawn Eww Sidebar
+    , { MODKEY|SHIFT, XK_z,                  spawn,      SHCMD("eww open --toggle dubs")}// Spawn Eww dubs
+
+    , { 0,      XF86XK_MonBrightnessDown, spawn, SHCMD("$HOME/dotfiles/scripts/dwm/light.sh down") } // light down
+    , { 0,      XF86XK_MonBrightnessUp,   spawn, SHCMD("$HOME/dotfiles/scripts/dwm/light.sh up") }   // light up
+    , { 0,      XF86XK_AudioLowerVolume,  spawn, SHCMD("$HOME/dotfiles/scripts/dwm/vol.sh down") }   // vol down
+    , { 0,      XF86XK_AudioRaiseVolume,  spawn, SHCMD("$HOME/dotfiles/scripts/dwm/vol.sh up") }     // vol up
+    , { 0,      XF86XK_AudioMute,         spawn, SHCMD("$HOME/dotfiles/scripts/dwm/vol.sh mute") }         // vol mute
+    , { 0,      XF86XK_AudioPlay,         spawn, SHCMD("$HOME/dotfiles/scripts/dwm/media.sh play-pause") } // media play-pause
+    , { 0,      XF86XK_AudioNext,         spawn, SHCMD("$HOME/dotfiles/scripts/dwm/media.sh next") }       // media next
+    , { 0,      XF86XK_AudioPrev,         spawn, SHCMD("$HOME/dotfiles/scripts/dwm/media.sh previous") }   // media previous
+    , { MODKEY, XK_F2,                 spawn, SHCMD("$HOME/dotfiles/scripts/dwm/light.sh down")}       // light down
+    , { MODKEY, XK_F3,                 spawn, SHCMD("$HOME/dotfiles/scripts/dwm/light.sh up")}         // light up
+    , { MODKEY, XK_F7,                 spawn, SHCMD("$HOME/dotfiles/scripts/dwm/vol.sh down")}         // vol down
+    , { MODKEY, XK_F8,                 spawn, SHCMD("$HOME/dotfiles/scripts/dwm/vol.sh up")}           // vol up
+    , { MODKEY, XK_F6,                 spawn, SHCMD("$HOME/dotfiles/scripts/dwm/vol.sh mute")}         // vol mute
+    , { MODKEY, XK_F10,                spawn, SHCMD("$HOME/dotfiles/scripts/dwm/media.sh play-pause")} // media play-pause
+    , { MODKEY, XK_F11,                spawn, SHCMD("$HOME/dotfiles/scripts/dwm/media.sh next")}       // media next
+    , { MODKEY, XK_F9,                 spawn, SHCMD("$HOME/dotfiles/scripts/dwm/media.sh previous")}   // media previous
+
+	/** , { MODKEY, XK_a, , } // Make window sticky */
+	/** , { MODKEY|SHIFT, XK_a, , } //  Unstick window */
+    /**  */
+	/** , { MODKEY, XK_h, , }// focus left */
+	/** , { MODKEY, XK_j, , }// focus down */
+	/** , { MODKEY, XK_k, , }// focus up */
+	/** , { MODKEY, XK_l, , }// focus right */
+	/** , { MODKEY|SHIFT, XK_h, , }// swap left */
+	/** , { MODKEY|SHIFT, XK_j, , }// swap down */
+	/** , { MODKEY|SHIFT, XK_k, , }// swap up */
+	/** , { MODKEY|SHIFT, XK_l, , }// swap right */
+	/** , { MODKEY|CONTROL, XK_h, , }// move left */
+	/** , { MODKEY|CONTROL, XK_j, , }// move down */
+	/** , { MODKEY|CONTROL, XK_k, , }// move up */
+	/** , { MODKEY|CONTROL, XK_l, , }// move right */
+    /**  */
+	/** , { MODKEY, XK_left  , , }// move float left */
+	/** , { MODKEY, XK_right , , }// move float right */
+	/** , { MODKEY, XK_up , , }// move float up */
+	/** , { MODKEY, XK_down , , }// move float down */
+	/** , { MODKEY|SHIFT XK_left  , , }// shrink float at right */
+	/** , { MODKEY|SHIFT XK_right , , }// expand float at right */
+	/** , { MODKEY|SHIFT XK_down , , }//  expand float at bottom */
+	/** , { MODKEY|SHIFT XK_up , , }//  shrink float at bottom */
+	/** , { MODKEY|CONTROL XK_left , , }//  expand float at left */
+	/** , { MODKEY|CONTROL XK_right , , }//  shrink float at left */
+	/** , { MODKEY|CONTROL XK_up , , }// expand float at top */
+	/** , { MODKEY|CONTROL XK__down , , }// shrink float at top */
+    /**  */
+
+	,
+
 	#if KEYMODES_PATCH
 	{ MODKEY,                       XK_Escape,     setkeymode,             {.ui = COMMANDMODE} },
 	#endif // KEYMODES_PATCH
@@ -1111,7 +1180,7 @@ static const Key keys[] = {
 	#if BAR_WINTITLEACTIONS_PATCH
 	{ MODKEY|ControlMask,           XK_z,          showhideclient,         {0} },
 	#endif // BAR_WINTITLEACTIONS_PATCH
-	{ MODKEY|ShiftMask,             XK_c,          killclient,             {0} },
+	/** { MODKEY|ShiftMask,             XK_c,          killclient,             {0} }, */
 	#if KILLUNSEL_PATCH
 	{ MODKEY|ShiftMask,             XK_x,          killunsel,              {0} },
 	#endif // KILLUNSEL_PATCH
@@ -1384,6 +1453,88 @@ static const Command commands[] = {
 	{ {ShiftMask,   0,          0,         0},    {XK_period, XK_b,     XK_d,      XK_Return},    killclient,      {0} },
 	{ {ShiftMask,   0,          0,         0},    {XK_period, XK_b,     XK_n,      XK_Return},    focusstack,      {.i = +1} },
 	{ {ShiftMask,   0,          ShiftMask, 0},    {XK_period, XK_b,     XK_n,      XK_Return},    focusstack,      {.i = -1} },
+
+    { { MODKEY, 0,      0, 0}, { XK_t, XK_backslash, 0, 0}, spawn, SHCMD("/home/shawn/dotfiles/scripts/xmonad/help.sh t") } // Help Toggles
+
+    /** , { MODKEY, 0,      0, 0}, { XK_t, XK_f, 0, 0},  ,  } // Toggle Fullscreen */
+    /** , { MODKEY, MODKEY, 0, 0}, { XK_t, XK_f, 0, 0},  ,  } // Toggle Fullscreen */
+    /** , { MODKEY, 0,      0, 0}, { XK_t, XK_t, 0, 0},  ,  } // Force focused window back into tiling */
+    /** , { MODKEY, MODKEY, 0, 0}, { XK_t, XK_t, 0, 0},  ,  } // Force focused window back into tiling */
+
+    , {   { MODKEY, 0, 0, 0 }, {XK_c, XK_backslash, 0, 0}, spawn,  SHCMD("/home/shawn/dotfiles/scripts/xmonad/help.sh c")}             // Help Change Layouts
+    /** , {   { MODKEY, 0, 0, 0 }, {XK_c, XK_1, 0 ,0 }  ,   // Switch to "Tall" layout */
+    /** , {   { MODKEY, 0, 0, 0 }, {XK_c, XK_2, 0 ,0 }  ,   // Switch to "Mirror Tall" layout */
+    /** , {   { MODKEY, 0, 0, 0 }, {XK_c, XK_3, 0 ,0 }  ,   // Switch to "Full" layout */
+    /** , {   { MODKEY, 0, 0, 0 }, {XK_c, XK_4, 0 ,0 }  ,   // Switch to "Magnifier NoMaster ThreeCol" layout */
+    /** , {   { MODKEY, 0, 0, 0 }, {XK_c, XK_n, 0 ,0 }, spawn ,    SHCMD(" ~/dotfiles/scripts/xmonad/xmonadctl.sh next-layout")}    -- Switch to Next layout */
+    /** , {   { MODKEY, 0, 0, 0 }, {XK_c, XK_p, 0 ,0 }, spawn ,    SHCMD(" ~/dotfiles/scripts/xmonad/xmonadctl.sh default-layout")} -- Switch to Default layout */
+
+    , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_backslash, 0 ,0 }, spawn ,   SHCMD("/home/shawn/dotfiles/scripts/xmonad/help.sh p")} // Help Prompt
+    /** , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_n, 0 ,0 }, , } //  Plain Notes Prompt */
+    /** , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_o, 0 ,0 }, , } //  Org Prompt */
+    /** , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_d, 0 ,0 }, , } //  Execute Scripts Directory */
+    /** , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_l, 0 ,0 }, , } //  Layout Prompt */
+    /** , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_m, 0 ,0 }, , } //  Man Prompt */
+    /** , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_r, 0 ,0 }, , } //   Run or raise window */
+    /** , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_p, 0 ,0 }, , } //  Prompt Terminal Program */
+    /** , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_t, 0 ,0 }, , } //  Theme Prompt */
+    /** , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_u, 0 ,0 }, , } //  Unicode Prompt */
+    /** , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_w, XK_g ,0 }, , } //  Prompt: Goto window */
+    /** , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_w, XK_b ,0 }, , } //  Prompt: Bring window to Current Workspace */
+    /** , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_x, 0 ,0 },, , } //  Xmonad Prompt */
+
+
+    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_backslash, 0, 0 }, spawn, SHCMD("/home/shawn/dotfiles/scripts/xmonad/help.sh n")} // Help Notifications
+    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_c, 0 ,0 }, spawn ,SHCMD("kill -s USR1 $(pidof deadd-notification-center)")} // Nootifications Center
+    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_h, XK_o,0 }, spawn ,    SHCMD("notify-send.py a  --hint boolean:deadd-notification-center:true int:id:0 boolean:state:true type:string:buttons")} //  Highlight On
+    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_h, XK_f,0 }, spawn ,    SHCMD("notify-send.py a  --hint boolean:deadd-notification-center:true int:id:0 boolean:state:false type:string:buttons")} //  Highlight Off
+    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_d, XK_c,0 }, spawn ,    SHCMD("notify-send.py a  --hint boolean:deadd-notification-center:true string:type:clearInCenter")} //  Clear Center
+    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_d, XK_p,0 }, spawn ,    SHCMD("notify-send.py a  --hint boolean:deadd-notification-center:true string:type:clearPopups")} //  Clear Popups
+    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_p, 0 ,0 }, spawn ,SHCMD("notify-send.py a --hint boolean:deadd-notification-center:true string:type:pausePopups")} //  Pause Notifications
+    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_u, 0 ,0 }, spawn ,SHCMD("notify-send.py a --hint boolean:deadd-notification-center:true string:type:unpausePopups")} //  Unpause Notifications
+    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_r, 0 ,0 }, spawn ,SHCMD("notify-send.py a --hint boolean:deadd-notification-center:true string:type:reloadStyle")} //  Reload Style
+    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_t, XK_g, 0 ,0 }, spawn ,    SHCMD("notify-send.py 'Icons are' 'COOL' --hint string:image-path:face-cool")} //  Gtk icon
+    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_t, XK_i, 0 ,0 }, spawn ,    SHCMD("notify-send.py 'Images' 'COOL' --hint string:image-path:file://$HOME/Pictures/Wallpapers/minecraft_swamp.jpeg")} //  Image file
+    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_t, XK_n, 0 }, spawn ,    SHCMD("notify-send.py 'Does pop up' -t 1")} //  Notification Center Only
+    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_t, XK_a, 0 }, spawn ,    SHCMD("notify-send.py '1' '2' --hint boolean:action-icons:true  --action yes:face-cool no:face-sick")} //  Action buttons gtk icons
+    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_t, XK_p,XK_1}, spawn ,  SHCMD("notify-send.py 'This notification has a progressbar' '33%' --hint int:has-percentage:33")} //  with progress bar
+    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_t, XK_p,XK_2}, spawn ,  SHCMD("notify-send.py 'This notification has a progressbar' '33%' --hint int:value:33")} //  with progress bar
+    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_t, XK_s, 0 }, spawn ,    SHCMD("notify-send.py 'This notification has a slider' '33%' --hint int:has-percentage:33 --action changeValue:abc")} //  with slider
+
+    , {   { MODKEY, 0, 0, 0 }, {XK_i, XK_backslash, 0 ,0 }, spawn , SHCMD("/home/shawn/dotfiles/scripts/xmonad/help.sh i")} // Help Info
+    , {   { MODKEY, 0, 0, 0 }, {XK_i, XK_p, 0 ,0 }, spawn ,    SHCMD("/home/shawn/dotfiles/scripts/xmobar/ping.sh 1")} // Info ping
+    , {   { MODKEY, 0, 0, 0 }, {XK_i, XK_b, 0 ,0 }, spawn ,    SHCMD("/home/shawn/dotfiles/scripts/xmobar/battery.sh 1")} // Info battery
+    , {   { MODKEY, 0, 0, 0 }, {XK_i, XK_d, 0 ,0 }, spawn ,    SHCMD("/home/shawn/dotfiles/scripts/xmobar/date.sh 1")} // Info date
+    , {   { MODKEY, 0, 0, 0 }, {XK_i, XK_c, 0 ,0 }, spawn ,    SHCMD("/home/shawn/dotfiles/scripts/xmobar/cpu.sh 1")} // Info cpu
+    , {   { MODKEY, 0, 0, 0 }, {XK_i, XK_m, 0 ,0 }, spawn ,    SHCMD("/home/shawn/dotfiles/scripts/xmobar/mem.sh 1")} // Info memory
+
+    , {   { MODKEY, 0, 0, 0 }, {XK_m, XK_backslash, 0 ,0 }, spawn , SHCMD("/home/shawn/dotfiles/scripts/xmonad/help.sh m")}  // Help Menu
+    , {   { MODKEY, 0, 0, 0 }, {XK_m, XK_p, 0 ,0 }, spawn ,    SHCMD("/home/shawn/dotfiles/scripts/xmobar/ping.sh 3")} // Menu ping
+    , {   { MODKEY, 0, 0, 0 }, {XK_m, XK_b, 0 ,0 }, spawn ,    SHCMD("/home/shawn/dotfiles/scripts/xmobar/battery.sh 3")} // Menu battery
+    , {   { MODKEY, 0, 0, 0 }, {XK_m, XK_d, 0 ,0 }, spawn ,    SHCMD("/home/shawn/dotfiles/scripts/xmobar/date.sh 3")} // Menu date
+    , {   { MODKEY, 0, 0, 0 }, {XK_m, XK_c, 0 ,0 }, spawn ,    SHCMD("/home/shawn/dotfiles/scripts/xmobar/cpu.sh 3")} // Menu cpu
+    , {   { MODKEY, 0, 0, 0 }, {XK_m, XK_m, 0 ,0 }, spawn ,    SHCMD("/home/shawn/dotfiles/scripts/xmobar/mem.sh 3")} // Menu memory
+    , {   { MODKEY, MODKEY, 0, 0 }, {XK_m, XK_m, 0 ,0 }, spawn ,    SHCMD("/home/shawn/dotfiles/PERSONAL_PATH/menu.sh")} // Menu Main
+
+    , { { MODKEY, 0, 0, 0 }, {XK_w, XK_backslash, 0 ,0 },  spawn , SHCMD("/home/shawn/dotfiles/scripts/xmonad/help.sh w")} // Help Wallpaper
+    , { { MODKEY, 0, 0, 0 }, {XK_w, XK_w, 0 ,0 },  spawn ,    SHCMD("~/dotfiles/PERSONAL_PATH/randbg")} //  Random Wallpaper
+    , { { MODKEY, MODKEY, 0, 0 }, {XK_w, XK_w, 0 ,0 },  spawn ,  SHCMD("~/dotfiles/PERSONAL_PATH/randbg")} //  Random Wallpaper
+    , { { MODKEY, 0, 0, 0 }, {XK_w, XK_r, 0 ,0 },  spawn ,    SHCMD("~/dotfiles/PERSONAL_PATH/randbg")} //  Random Wallpaper
+    , { { MODKEY, MODKEY, 0, 0 }, {XK_w, XK_r, 0 ,0 },  spawn ,    SHCMD("~/dotfiles/PERSONAL_PATH/randbg")} //  Random Wallpaper
+    , { { MODKEY, 0, 0, 0 }, {XK_w, XK_p, 0 ,0 },  spawn ,    SHCMD("~/dotfiles/PERSONAL_PATH/prevbg")} //  Previous Wallpaper
+    , { { MODKEY, MODKEY, 0, 0 }, {XK_w, XK_p, 0 ,0 },  spawn ,    SHCMD("~/dotfiles/PERSONAL_PATH/prevbg")} //  Previous Wallpaper
+    , { { MODKEY, 0, 0, 0 }, {XK_w, XK_n, 0 ,0 },  spawn ,    SHCMD("~/dotfiles/PERSONAL_PATH/nextbg")} //  Next Wallpaper
+    , { { MODKEY, MODKEY, 0, 0 }, {XK_w, XK_n, 0 ,0 },  spawn ,    SHCMD("~/dotfiles/PERSONAL_PATH/nextbg")} //  Next Wallpaper
+
+
+    , {  { MODKEY, 0, 0, 0 }, { XK_s, XK_backslash, 0, 0 }, spawn, SHCMD("/home/shawn/dotfiles/scripts/xmonad/help.sh s")} // Help Spawn
+    , {  { MODKEY, 0, 0, 0 }, {XK_s, XK_c, 0 ,0 }, spawn , SHCMD("~/dotfiles/PERSONAL_PATH/click4ever")} // Spawn Click4ever (~/dotfiles/PERSONAL_PATH/click4ever"))
+    , {  { MODKEY, 0, 0, 0 }, {XK_s, XK_p, 0 ,0 }, spawn , SHCMD("notify-send 'Xmonad' 'Spawning pavucontrol'; pavucontrol")} // Spawn pavucontrol
+    , {  { MODKEY, 0, 0, 0 }, {XK_s, XK_r, 0 ,0 }, spawn , SHCMD("notify-send 'Xmonad' 'Spawning vokoscreenNG';vokoscreenNG")} // Spawn vokoscreenNG
+    , {  { MODKEY, 0, 0, 0 }, {XK_s, XK_b, 0 ,0 }, spawn , SHCMD("notify-send'Xmoand' 'Spawning chrome';/usr/bin/google-chrome-stable")}                    // Spawn chrome
+    , {  { MODKEY, 0, 0, 0 }, {XK_s, XK_h, 0 ,0 }, spawn , SHCMD("notify-send'Xmoand' 'Spawning hakuneko-desktop';hakuneko-desktop")}                       // Spawn hakuneko-desktop
+    , {  { MODKEY, 0, 0, 0 }, {XK_s, XK_s, 0 ,0 }, spawn , SHCMD("notify-send'Xmoand' 'Spawning dex';dex /usr/share/applications/spotify-adblock.desktop")} // Spawn spotify
+
 };
 #endif // KEYMODES_PATCH
 
@@ -1402,7 +1553,7 @@ static const Button buttons[] = {
 	#if BAR_LAYOUTMENU_PATCH
 	{ ClkLtSymbol,          0,                   Button3,        layoutmenu,     {0} },
 	#else
-	{ ClkLtSymbol,          0,                   Button3,        setlayout,      {.v = &layouts[2]} },
+	d ClkLtSymbol,          0,                   Button3,        setlayout,      {.v = &layouts[2]} },
 	#endif // BAR_LAYOUTMENU_PATCH
 	#if BAR_WINTITLEACTIONS_PATCH
 	{ ClkWinTitle,          0,                   Button1,        togglewin,      {0} },
