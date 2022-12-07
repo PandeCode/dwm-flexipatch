@@ -493,6 +493,8 @@ static const Rule rules[] = {
 	RULE(.wintype = WTYPE "UTILITY", .isfloating = 1)
 	RULE(.wintype = WTYPE "TOOLBAR", .isfloating = 1)
 	RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
+	RULE(.wintype = WTYPE "Blender Preferences", .isfloating = 1)
+	RULE(.title = "Blender Preferences", .isfloating = 1)
 
 	RULE(.wintype = "_KDE_NET_WM_WINDOW_TYPE_OVERRIDE", .isfloating = 1)
 	RULE(.wintype = "_KDE_NET_WM_WINDOW_TYPE_OVERRIDE, _NET_WM_WINDOW_TYPE_NORMAL", .isfloating = 1)
@@ -513,6 +515,7 @@ static const Rule rules[] = {
 	RULE(.class = "neovide",         .tags = 1<<2)
 	RULE(.class = "Code",            .tags = 1<<2)
 	RULE(.class = "Code - Insiders", .tags = 1<<2)
+	RULE(.class = "Blender",         .tags = 1<<2)
 
 	RULE(.class = "hakuneko-desktop",.tags = 1 << 3)
 	RULE(.class = "Unity",           .tags = 1 << 3)
