@@ -931,16 +931,16 @@ static const char *termcmd[]  = { "st", NULL };
 #else
 /* commands spawned when clicking statusbar, the mouse button pressed is exported as BUTTON */
 static const StatusCmd statuscmds[] = {
-    {"~/dotfiles/scripts/dwmblocks/media_info.sh",       0},
-    {"~/dotfiles/scripts/dwmblocks/media_prev.sh",       1},
-    {"~/dotfiles/scripts/dwmblocks/media_play_pause.sh", 2},
-    {"~/dotfiles/scripts/dwmblocks/media_next.sh",       3},
-    {"~/dotfiles/scripts/dwmblocks/ping.sh",             4},
-    {"~/dotfiles/scripts/dwmblocks/mem.sh",              5},
-    {"~/dotfiles/scripts/dwmblocks/cpu.sh",              6},
-    {"~/dotfiles/scripts/dwmblocks/date.sh",             7},
-    {"~/dotfiles/scripts/dwmblocks/vol.sh",              8},
-    {"~/dotfiles/scripts/dwmblocks/battery.sh",          9},
+	{"~/dotfiles/scripts/dwmblocks/media_info.sh",       0},
+	{"~/dotfiles/scripts/dwmblocks/media_prev.sh",       1},
+	{"~/dotfiles/scripts/dwmblocks/media_play_pause.sh", 2},
+	{"~/dotfiles/scripts/dwmblocks/media_next.sh",       3},
+	{"~/dotfiles/scripts/dwmblocks/ping.sh",             4},
+	{"~/dotfiles/scripts/dwmblocks/mem.sh",              5},
+	{"~/dotfiles/scripts/dwmblocks/cpu.sh",              6},
+	{"~/dotfiles/scripts/dwmblocks/date.sh",             7},
+	{"~/dotfiles/scripts/dwmblocks/vol.sh",              8},
+	{"~/dotfiles/scripts/dwmblocks/battery.sh",          9},
 };
 /* test the above with: xsetroot -name "$(printf '\x01Volume |\x02 CPU |\x03 Battery')" */
 static const char *statuscmd[] = { "/bin/sh", "-c", NULL, NULL };
