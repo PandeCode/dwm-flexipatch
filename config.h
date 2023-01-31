@@ -89,7 +89,7 @@ static const int horizpadbar             = 2;   /* horizontal padding for status
 static const int vertpadbar              = 0;   /* vertical padding for statusbar */
 #endif // BAR_STATUSPADDING_PATCH
 #if BAR_STATUSBUTTON_PATCH
-static const char buttonbar[]            = "<O>";
+static const char buttonbar[]            = " ";
 #endif // BAR_STATUSBUTTON_PATCH
 #if BAR_SYSTRAY_PATCH
 static const unsigned int systrayspacing = 2;   /* systray spacing */
@@ -382,16 +382,21 @@ static char *statuscolors[][ColCount] = {
 static const char *layoutmenu_cmd = "layoutmenu.sh";
 #endif
 
+#define GEN_CMD(ps_name, run) \
+	"sh", "-c", "if [\"\" == \"$(pidof " ps_name ")\"]; then " run "; fi"
+
+
 #if COOL_AUTOSTART_PATCH
 static const char *const autostart[] = {
-	"randbg", NULL,
-	"startdwmblocks", NULL,
-
-	"sh", "-c", "if [\"\" == \"$(pidof nm-applet)\"]; then nm-applet;                            fi", NULL,
-	"sh", "-c", "if [\"\" == \"$(pidof xflux)\"];     then xflux -l 0;                           fi", NULL,
-	"sh", "-c", "if [\"\" == \"$(pidof picom)\"];     then picom -b --experimental-backend;      fi", NULL,
-	"sh", "-c", "if [\"\" == \"$(pidof clipit)\"];    then clipit;                               fi", NULL,
-	"sh", "-c", "if [\"\" == \"$(pidof st)\"];        then st;                                   fi", NULL,
+	GEN_CMD("picom",                "picom -b --experimental-backend"),      NULL,
+	GEN_CMD("xflux",                "xflux -l 0"),                           NULL,
+	GEN_CMD("barrier",              "barrier"),                              NULL,
+	GEN_CMD("greenclip",            "greenclip deamon"),                     NULL,
+	GEN_CMD("eww",                  "eww deamon"),                           NULL,
+	GEN_CMD("kdeconnect-indicator", "kdeconnect-indicator"),                 NULL,
+	GEN_CMD("sxhkd",                "sxhkd -c ~/.config/sxhkd/dwm.sxhkdrc"), NULL,
+	"lastbg",                       NULL,
+	"startdwmblocks",               NULL,
 	NULL /* terminate */
 };
 #endif // COOL_AUTOSTART_PATCH
@@ -960,37 +965,8 @@ static const Key on_empty_keys[] = {
 static const Key keys[] = {
 	/* modifier                     key            function                argument */
 
-	    { MODKEY, XK_backslash, spawn, SHCMD("/home/shawn/dotfiles/scripts/xmonad/help.sh")}// Help
+     { ALT,          XK_F4,                 killclient, {0} } // Alt F4, kill windwow
 
-    , { MODKEY, XK_v, spawn, SHCMD("rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'")}// Select from Green Clip and set as current clipboard value
-    ,   { MODKEY|SHIFT, XK_v,spawn , SHCMD("rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}' ; sleep 0.5; xdotool type $(xclip -o -selection clipboard)")} // Select from Green Clip and paste
-    ,   { MODKEY|CONTROL|SHIFT, XK_v,    spawn , SHCMD("pkill greenclip && greenclip clear && greenclip daemon & notify-send 'System' 'Greenclip Cleared' ;")}                        // Clear Green Clip
-
-    , { ALT,          XK_F4,                 killclient, {0} } // Alt F4, kill windwow
-    , { MODKEY|SHIFT, XK_l,                  spawn,      SHCMD("betterlockscreen -lock")}         // Lock WM
-    , { ALT,          XK_F2,                 spawn,      SHCMD("dmenu_run  -f -i -l 10 -p 'sh -c'")} // Dmenu launch program
-
-    , { MODKEY,       XK_Print,              spawn,      SHCMD("flameshot full -p $HOME/Pictures/Screenshots")}     // Full Screenshot
-    , { MODKEY|SHIFT,             XK_Print, spawn,      SHCMD("flameshot gui  -p $HOME/Pictures/Screenshots")} // Snip Screenshot
-    , { MODKEY, XK_z,      spawn,    SHCMD("eww open --toggle sidebar")}// Spawn Eww Sidebar
-    , { MODKEY|SHIFT, XK_z,                  spawn,      SHCMD("eww open --toggle dubs")}// Spawn Eww dubs
-
-    , { 0,      XF86XK_MonBrightnessDown, spawn, SHCMD("$HOME/dotfiles/scripts/dwm/light.sh down") } // light down
-    , { 0,      XF86XK_MonBrightnessUp,   spawn, SHCMD("$HOME/dotfiles/scripts/dwm/light.sh up") }   // light up
-    , { 0,      XF86XK_AudioLowerVolume,  spawn, SHCMD("$HOME/dotfiles/scripts/dwm/vol.sh down") }   // vol down
-    , { 0,      XF86XK_AudioRaiseVolume,  spawn, SHCMD("$HOME/dotfiles/scripts/dwm/vol.sh up") }     // vol up
-    , { 0,      XF86XK_AudioMute,         spawn, SHCMD("$HOME/dotfiles/scripts/dwm/vol.sh mute") }         // vol mute
-    , { 0,      XF86XK_AudioPlay,         spawn, SHCMD("$HOME/dotfiles/scripts/dwm/media.sh play-pause") } // media play-pause
-    , { 0,      XF86XK_AudioNext,         spawn, SHCMD("$HOME/dotfiles/scripts/dwm/media.sh next") }       // media next
-    , { 0,      XF86XK_AudioPrev,         spawn, SHCMD("$HOME/dotfiles/scripts/dwm/media.sh previous") }   // media previous
-    , { MODKEY, XK_F2,                 spawn, SHCMD("$HOME/dotfiles/scripts/dwm/light.sh down")}       // light down
-    , { MODKEY, XK_F3,                 spawn, SHCMD("$HOME/dotfiles/scripts/dwm/light.sh up")}         // light up
-    , { MODKEY, XK_F7,                 spawn, SHCMD("$HOME/dotfiles/scripts/dwm/vol.sh down")}         // vol down
-    , { MODKEY, XK_F8,                 spawn, SHCMD("$HOME/dotfiles/scripts/dwm/vol.sh up")}           // vol up
-    , { MODKEY, XK_F6,                 spawn, SHCMD("$HOME/dotfiles/scripts/dwm/vol.sh mute")}         // vol mute
-    , { MODKEY, XK_F10,                spawn, SHCMD("$HOME/dotfiles/scripts/dwm/media.sh play-pause")} // media play-pause
-    , { MODKEY, XK_F11,                spawn, SHCMD("$HOME/dotfiles/scripts/dwm/media.sh next")}       // media next
-    , { MODKEY, XK_F9,                 spawn, SHCMD("$HOME/dotfiles/scripts/dwm/media.sh previous")}   // media previous
 
 	/** , { MODKEY, XK_a, , } // Make window sticky */
 	/** , { MODKEY|SHIFT, XK_a, , } //  Unstick window */
@@ -1538,7 +1514,7 @@ static const Command commands[] = {
 static const Button buttons[] = {
 	/* click                event mask           button          function        argument */
 	#if BAR_STATUSBUTTON_PATCH
-	{ ClkButton,            0,                   Button1,        spawn,          {.v = dmenucmd } },
+	{ ClkButton,            0,                   Button1,        spawn,          SHCMD("menu.sh") },
 	#endif // BAR_STATUSBUTTON_PATCH
 	{ ClkLtSymbol,          0,                   Button1,        setlayout,      {0} },
 	#if BAR_LAYOUTMENU_PATCH
