@@ -1432,7 +1432,7 @@ static const Command commands[] = {
 static const Button buttons[] = {
 	/* click                event mask           button          function        argument */
 	#if BAR_STATUSBUTTON_PATCH
-	{ ClkButton,            0,                   Button1,        spawn,          dmenucmd },
+	{ ClkButton,            0,                   Button1,        spawn,          {.v = dmenucmd } },
 	{ ClkButton,            0,                   Button3,        spawn,          SHCMD("menu.sh") },
 	#endif // BAR_STATUSBUTTON_PATCH
 	{ ClkLtSymbol,          0,                   Button1,        setlayout,      {0} },
