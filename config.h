@@ -962,12 +962,6 @@ static const Key on_empty_keys[] = {
 
 
 
-static const Key keys[] = {
-	/* modifier                     key            function                argument */
-
-     { ALT,          XK_F4,                 killclient, {0} } // Alt F4, kill windwow
-
-
 	/** , { MODKEY, XK_a, , } // Make window sticky */
 	/** , { MODKEY|SHIFT, XK_a, , } //  Unstick window */
     /**  */
@@ -998,19 +992,27 @@ static const Key keys[] = {
 	/** , { MODKEY|CONTROL XK__down , , }// shrink float at top */
     /**  */
 
-	,
+static const Key keys[] = {
+	/* modifier                     key            function                argument */
+
+	{ ALT,          XK_F4,                 killclient, {0} },
+	{ MODKEY,                       XK_b,          togglebar,              {0} },
+
+	#if STICKY_PATCH
+	{ MODKEY,           XK_a,          setsticky,           {0} },
+	{ MODKEY|ShiftMask, XK_a,          unsetsticky,           {0} },
+	#endif // STICKY_PATCH
+
 
 	#if KEYMODES_PATCH
 	{ MODKEY,                       XK_Escape,     setkeymode,             {.ui = COMMANDMODE} },
 	#endif // KEYMODES_PATCH
-	{ MODKEY,                       XK_p,          spawn,                  {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return,     spawn,                  {.v = termcmd } },
 	#if RIODRAW_PATCH
 	{ MODKEY|ControlMask,           XK_p,          riospawnsync,           {.v = dmenucmd } },
 	{ MODKEY|ControlMask,           XK_Return,     riospawn,               {.v = termcmd } },
 	{ MODKEY,                       XK_s,          rioresize,              {0} },
 	#endif // RIODRAW_PATCH
-	{ MODKEY,                       XK_b,          togglebar,              {0} },
 	#if TAB_PATCH
 	{ MODKEY|ControlMask,           XK_b,          tabmode,                {-1} },
 	#endif // TAB_PATCH
@@ -1221,9 +1223,6 @@ static const Key keys[] = {
 	#if FULLSCREEN_PATCH
 	{ MODKEY|ShiftMask,             XK_f,          fullscreen,             {0} },
 	#endif // FULLSCREEN_PATCH
-	#if STICKY_PATCH
-	{ MODKEY|ShiftMask,             XK_s,          togglesticky,           {0} },
-	#endif // STICKY_PATCH
 	#if SCRATCHPAD_ALT_1_PATCH
 	{ MODKEY,                       XK_minus,      scratchpad_show,        {0} },
 	{ MODKEY|ShiftMask,             XK_minus,      scratchpad_hide,        {0} },

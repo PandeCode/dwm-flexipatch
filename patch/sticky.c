@@ -7,3 +7,21 @@ togglesticky(const Arg *arg)
 	arrange(selmon);
 }
 
+void
+setsticky(const Arg *arg)
+{
+	if (!selmon->sel)
+		return;
+	selmon->sel->issticky = 1;
+	arrange(selmon);
+}
+
+void
+unsetsticky(const Arg *arg)
+{
+	if (!selmon->sel)
+		return;
+	selmon->sel->issticky = 0;
+	arrange(selmon);
+}
+
