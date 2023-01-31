@@ -1420,88 +1420,6 @@ static const Command commands[] = {
 	{ {ShiftMask,   0,          0,         0},    {XK_period, XK_b,     XK_d,      XK_Return},    killclient,      {0} },
 	{ {ShiftMask,   0,          0,         0},    {XK_period, XK_b,     XK_n,      XK_Return},    focusstack,      {.i = +1} },
 	{ {ShiftMask,   0,          ShiftMask, 0},    {XK_period, XK_b,     XK_n,      XK_Return},    focusstack,      {.i = -1} },
-
-    { { MODKEY, 0,      0, 0}, { XK_t, XK_backslash, 0, 0}, spawn, SHCMD("/home/shawn/dotfiles/scripts/xmonad/help.sh t") } // Help Toggles
-
-    /** , { MODKEY, 0,      0, 0}, { XK_t, XK_f, 0, 0},  ,  } // Toggle Fullscreen */
-    /** , { MODKEY, MODKEY, 0, 0}, { XK_t, XK_f, 0, 0},  ,  } // Toggle Fullscreen */
-    /** , { MODKEY, 0,      0, 0}, { XK_t, XK_t, 0, 0},  ,  } // Force focused window back into tiling */
-    /** , { MODKEY, MODKEY, 0, 0}, { XK_t, XK_t, 0, 0},  ,  } // Force focused window back into tiling */
-
-    , {   { MODKEY, 0, 0, 0 }, {XK_c, XK_backslash, 0, 0}, spawn,  SHCMD("/home/shawn/dotfiles/scripts/xmonad/help.sh c")}             // Help Change Layouts
-    /** , {   { MODKEY, 0, 0, 0 }, {XK_c, XK_1, 0 ,0 }  ,   // Switch to "Tall" layout */
-    /** , {   { MODKEY, 0, 0, 0 }, {XK_c, XK_2, 0 ,0 }  ,   // Switch to "Mirror Tall" layout */
-    /** , {   { MODKEY, 0, 0, 0 }, {XK_c, XK_3, 0 ,0 }  ,   // Switch to "Full" layout */
-    /** , {   { MODKEY, 0, 0, 0 }, {XK_c, XK_4, 0 ,0 }  ,   // Switch to "Magnifier NoMaster ThreeCol" layout */
-    /** , {   { MODKEY, 0, 0, 0 }, {XK_c, XK_n, 0 ,0 }, spawn ,    SHCMD(" ~/dotfiles/scripts/xmonad/xmonadctl.sh next-layout")}    -- Switch to Next layout */
-    /** , {   { MODKEY, 0, 0, 0 }, {XK_c, XK_p, 0 ,0 }, spawn ,    SHCMD(" ~/dotfiles/scripts/xmonad/xmonadctl.sh default-layout")} -- Switch to Default layout */
-
-    , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_backslash, 0 ,0 }, spawn ,   SHCMD("/home/shawn/dotfiles/scripts/xmonad/help.sh p")} // Help Prompt
-    /** , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_n, 0 ,0 }, , } //  Plain Notes Prompt */
-    /** , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_o, 0 ,0 }, , } //  Org Prompt */
-    /** , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_d, 0 ,0 }, , } //  Execute Scripts Directory */
-    /** , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_l, 0 ,0 }, , } //  Layout Prompt */
-    /** , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_m, 0 ,0 }, , } //  Man Prompt */
-    /** , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_r, 0 ,0 }, , } //   Run or raise window */
-    /** , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_p, 0 ,0 }, , } //  Prompt Terminal Program */
-    /** , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_t, 0 ,0 }, , } //  Theme Prompt */
-    /** , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_u, 0 ,0 }, , } //  Unicode Prompt */
-    /** , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_w, XK_g ,0 }, , } //  Prompt: Goto window */
-    /** , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_w, XK_b ,0 }, , } //  Prompt: Bring window to Current Workspace */
-    /** , {   { MODKEY, 0, 0, 0 }, {XK_p, XK_x, 0 ,0 },, , } //  Xmonad Prompt */
-
-
-    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_backslash, 0, 0 }, spawn, SHCMD("/home/shawn/dotfiles/scripts/xmonad/help.sh n")} // Help Notifications
-    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_c, 0 ,0 }, spawn ,SHCMD("kill -s USR1 $(pidof deadd-notification-center)")} // Nootifications Center
-    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_h, XK_o,0 }, spawn ,    SHCMD("notify-send.py a  --hint boolean:deadd-notification-center:true int:id:0 boolean:state:true type:string:buttons")} //  Highlight On
-    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_h, XK_f,0 }, spawn ,    SHCMD("notify-send.py a  --hint boolean:deadd-notification-center:true int:id:0 boolean:state:false type:string:buttons")} //  Highlight Off
-    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_d, XK_c,0 }, spawn ,    SHCMD("notify-send.py a  --hint boolean:deadd-notification-center:true string:type:clearInCenter")} //  Clear Center
-    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_d, XK_p,0 }, spawn ,    SHCMD("notify-send.py a  --hint boolean:deadd-notification-center:true string:type:clearPopups")} //  Clear Popups
-    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_p, 0 ,0 }, spawn ,SHCMD("notify-send.py a --hint boolean:deadd-notification-center:true string:type:pausePopups")} //  Pause Notifications
-    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_u, 0 ,0 }, spawn ,SHCMD("notify-send.py a --hint boolean:deadd-notification-center:true string:type:unpausePopups")} //  Unpause Notifications
-    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_r, 0 ,0 }, spawn ,SHCMD("notify-send.py a --hint boolean:deadd-notification-center:true string:type:reloadStyle")} //  Reload Style
-    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_t, XK_g, 0 ,0 }, spawn ,    SHCMD("notify-send.py 'Icons are' 'COOL' --hint string:image-path:face-cool")} //  Gtk icon
-    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_t, XK_i, 0 ,0 }, spawn ,    SHCMD("notify-send.py 'Images' 'COOL' --hint string:image-path:file://$HOME/Pictures/Wallpapers/minecraft_swamp.jpeg")} //  Image file
-    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_t, XK_n, 0 }, spawn ,    SHCMD("notify-send.py 'Does pop up' -t 1")} //  Notification Center Only
-    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_t, XK_a, 0 }, spawn ,    SHCMD("notify-send.py '1' '2' --hint boolean:action-icons:true  --action yes:face-cool no:face-sick")} //  Action buttons gtk icons
-    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_t, XK_p,XK_1}, spawn ,  SHCMD("notify-send.py 'This notification has a progressbar' '33%' --hint int:has-percentage:33")} //  with progress bar
-    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_t, XK_p,XK_2}, spawn ,  SHCMD("notify-send.py 'This notification has a progressbar' '33%' --hint int:value:33")} //  with progress bar
-    , {   { MODKEY, 0, 0, 0 }, {XK_n, XK_t, XK_s, 0 }, spawn ,    SHCMD("notify-send.py 'This notification has a slider' '33%' --hint int:has-percentage:33 --action changeValue:abc")} //  with slider
-
-    , {   { MODKEY, 0, 0, 0 }, {XK_i, XK_backslash, 0 ,0 }, spawn , SHCMD("/home/shawn/dotfiles/scripts/xmonad/help.sh i")} // Help Info
-    , {   { MODKEY, 0, 0, 0 }, {XK_i, XK_p, 0 ,0 }, spawn ,    SHCMD("/home/shawn/dotfiles/scripts/xmobar/ping.sh 1")} // Info ping
-    , {   { MODKEY, 0, 0, 0 }, {XK_i, XK_b, 0 ,0 }, spawn ,    SHCMD("/home/shawn/dotfiles/scripts/xmobar/battery.sh 1")} // Info battery
-    , {   { MODKEY, 0, 0, 0 }, {XK_i, XK_d, 0 ,0 }, spawn ,    SHCMD("/home/shawn/dotfiles/scripts/xmobar/date.sh 1")} // Info date
-    , {   { MODKEY, 0, 0, 0 }, {XK_i, XK_c, 0 ,0 }, spawn ,    SHCMD("/home/shawn/dotfiles/scripts/xmobar/cpu.sh 1")} // Info cpu
-    , {   { MODKEY, 0, 0, 0 }, {XK_i, XK_m, 0 ,0 }, spawn ,    SHCMD("/home/shawn/dotfiles/scripts/xmobar/mem.sh 1")} // Info memory
-
-    , {   { MODKEY, 0, 0, 0 }, {XK_m, XK_backslash, 0 ,0 }, spawn , SHCMD("/home/shawn/dotfiles/scripts/xmonad/help.sh m")}  // Help Menu
-    , {   { MODKEY, 0, 0, 0 }, {XK_m, XK_p, 0 ,0 }, spawn ,    SHCMD("/home/shawn/dotfiles/scripts/xmobar/ping.sh 3")} // Menu ping
-    , {   { MODKEY, 0, 0, 0 }, {XK_m, XK_b, 0 ,0 }, spawn ,    SHCMD("/home/shawn/dotfiles/scripts/xmobar/battery.sh 3")} // Menu battery
-    , {   { MODKEY, 0, 0, 0 }, {XK_m, XK_d, 0 ,0 }, spawn ,    SHCMD("/home/shawn/dotfiles/scripts/xmobar/date.sh 3")} // Menu date
-    , {   { MODKEY, 0, 0, 0 }, {XK_m, XK_c, 0 ,0 }, spawn ,    SHCMD("/home/shawn/dotfiles/scripts/xmobar/cpu.sh 3")} // Menu cpu
-    , {   { MODKEY, 0, 0, 0 }, {XK_m, XK_m, 0 ,0 }, spawn ,    SHCMD("/home/shawn/dotfiles/scripts/xmobar/mem.sh 3")} // Menu memory
-    , {   { MODKEY, MODKEY, 0, 0 }, {XK_m, XK_m, 0 ,0 }, spawn ,    SHCMD("/home/shawn/dotfiles/PERSONAL_PATH/menu.sh")} // Menu Main
-
-    , { { MODKEY, 0, 0, 0 }, {XK_w, XK_backslash, 0 ,0 },  spawn , SHCMD("/home/shawn/dotfiles/scripts/xmonad/help.sh w")} // Help Wallpaper
-    , { { MODKEY, 0, 0, 0 }, {XK_w, XK_w, 0 ,0 },  spawn ,    SHCMD("~/dotfiles/PERSONAL_PATH/randbg")} //  Random Wallpaper
-    , { { MODKEY, MODKEY, 0, 0 }, {XK_w, XK_w, 0 ,0 },  spawn ,  SHCMD("~/dotfiles/PERSONAL_PATH/randbg")} //  Random Wallpaper
-    , { { MODKEY, 0, 0, 0 }, {XK_w, XK_r, 0 ,0 },  spawn ,    SHCMD("~/dotfiles/PERSONAL_PATH/randbg")} //  Random Wallpaper
-    , { { MODKEY, MODKEY, 0, 0 }, {XK_w, XK_r, 0 ,0 },  spawn ,    SHCMD("~/dotfiles/PERSONAL_PATH/randbg")} //  Random Wallpaper
-    , { { MODKEY, 0, 0, 0 }, {XK_w, XK_p, 0 ,0 },  spawn ,    SHCMD("~/dotfiles/PERSONAL_PATH/prevbg")} //  Previous Wallpaper
-    , { { MODKEY, MODKEY, 0, 0 }, {XK_w, XK_p, 0 ,0 },  spawn ,    SHCMD("~/dotfiles/PERSONAL_PATH/prevbg")} //  Previous Wallpaper
-    , { { MODKEY, 0, 0, 0 }, {XK_w, XK_n, 0 ,0 },  spawn ,    SHCMD("~/dotfiles/PERSONAL_PATH/nextbg")} //  Next Wallpaper
-    , { { MODKEY, MODKEY, 0, 0 }, {XK_w, XK_n, 0 ,0 },  spawn ,    SHCMD("~/dotfiles/PERSONAL_PATH/nextbg")} //  Next Wallpaper
-
-
-    , {  { MODKEY, 0, 0, 0 }, { XK_s, XK_backslash, 0, 0 }, spawn, SHCMD("/home/shawn/dotfiles/scripts/xmonad/help.sh s")} // Help Spawn
-    , {  { MODKEY, 0, 0, 0 }, {XK_s, XK_c, 0 ,0 }, spawn , SHCMD("~/dotfiles/PERSONAL_PATH/click4ever")} // Spawn Click4ever (~/dotfiles/PERSONAL_PATH/click4ever"))
-    , {  { MODKEY, 0, 0, 0 }, {XK_s, XK_p, 0 ,0 }, spawn , SHCMD("notify-send 'Xmonad' 'Spawning pavucontrol'; pavucontrol")} // Spawn pavucontrol
-    , {  { MODKEY, 0, 0, 0 }, {XK_s, XK_r, 0 ,0 }, spawn , SHCMD("notify-send 'Xmonad' 'Spawning vokoscreenNG';vokoscreenNG")} // Spawn vokoscreenNG
-    , {  { MODKEY, 0, 0, 0 }, {XK_s, XK_b, 0 ,0 }, spawn , SHCMD("notify-send'Xmoand' 'Spawning chrome';/usr/bin/google-chrome-stable")}                    // Spawn chrome
-    , {  { MODKEY, 0, 0, 0 }, {XK_s, XK_h, 0 ,0 }, spawn , SHCMD("notify-send'Xmoand' 'Spawning hakuneko-desktop';hakuneko-desktop")}                       // Spawn hakuneko-desktop
-    , {  { MODKEY, 0, 0, 0 }, {XK_s, XK_s, 0 ,0 }, spawn , SHCMD("notify-send'Xmoand' 'Spawning dex';dex /usr/share/applications/spotify-adblock.desktop")} // Spawn spotify
-
 };
 #endif // KEYMODES_PATCH
 
@@ -1514,7 +1432,8 @@ static const Command commands[] = {
 static const Button buttons[] = {
 	/* click                event mask           button          function        argument */
 	#if BAR_STATUSBUTTON_PATCH
-	{ ClkButton,            0,                   Button1,        spawn,          SHCMD("menu.sh") },
+	{ ClkButton,            0,                   Button1,        spawn,          dmenucmd },
+	{ ClkButton,            0,                   Button3,        spawn,          SHCMD("menu.sh") },
 	#endif // BAR_STATUSBUTTON_PATCH
 	{ ClkLtSymbol,          0,                   Button1,        setlayout,      {0} },
 	#if BAR_LAYOUTMENU_PATCH

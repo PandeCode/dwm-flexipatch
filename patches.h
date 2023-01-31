@@ -717,7 +717,7 @@
  * can be performed.
  * https://dwm.suckless.org/patches/keymodes/
  */
-#define KEYMODES_PATCH 1
+#define KEYMODES_PATCH 0
 
 /* This patch adds a keybinding to kills all visible clients that are not selected.
  * https://dwm.suckless.org/patches/killunsel/
