@@ -1,0 +1,1382 @@
+[
+	{
+		"file": "drw.c",
+		"command": "clang -c -std=c99 -pedantic -Wall -Wno-unused-function -Wno-deprecated-declarations -Wno-tautological-pointer-compare -Wno-strict-prototypes -Wno-pointer-compare -O3 -I/usr/X11R6/include -I/usr/include/freetype2 -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_POSIX_C_SOURCE=200809L -DVERSION=\"6.4.pande\" -DXINERAMA drw.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch"
+	},
+	{
+		"file": "dwm.c",
+		"command": "clang -c -std=c99 -pedantic -Wall -Wno-unused-function -Wno-deprecated-declarations -Wno-tautological-pointer-compare -Wno-strict-prototypes -Wno-pointer-compare -O3 -I/usr/X11R6/include -I/usr/include/freetype2 -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_POSIX_C_SOURCE=200809L -DVERSION=\"6.4.pande\" -DXINERAMA dwm.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch"
+	},
+	{
+		"file": "util.c",
+		"command": "clang -c -std=c99 -pedantic -Wall -Wno-unused-function -Wno-deprecated-declarations -Wno-tautological-pointer-compare -Wno-strict-prototypes -Wno-pointer-compare -O3 -I/usr/X11R6/include -I/usr/include/freetype2 -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_POSIX_C_SOURCE=200809L -DVERSION=\"6.4.pande\" -DXINERAMA util.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch"
+	},
+	{
+		"file": "./config.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./drw.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/alttab.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/alttab.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/aspectresize.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/aspectresize.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/attachx.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/attachx.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/autostart.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/autostart.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_alpha.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_alpha.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_alternativetags.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_alternativetags.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_anybar.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_anybar.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_awesomebar.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_awesomebar.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_dwmblocks.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_dwmblocks.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_ewmhtags.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_ewmhtags.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_fancybar.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_fancybar.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_flexwintitle.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_flexwintitle.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_holdbar.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_holdbar.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_indicators.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_indicators.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_layoutmenu.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_layoutmenu.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_ltsymbol.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_ltsymbol.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_powerline_status.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_powerline_status.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_powerline_tags.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_powerline_tags.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_status2d.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_status2d.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_statusbutton.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_statusbutton.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_status.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_statuscmd.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_statuscmd.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_statuscolors.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_statuscolors.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_status.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_systray.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_systray.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_tabgroups.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_tabgroups.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_taggrid.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_taggrid.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_tagicons.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_tagicons.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_taglabels.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_taglabels.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_tagpreview.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_tagpreview.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_tags.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_tags.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_vtcolors.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_vtcolors.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_winicon.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_winicon.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_wintitleactions.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_wintitleactions.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_wintitle.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_wintitle_floating.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_wintitle_floating.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_wintitle.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_wintitle_hidden.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/bar_wintitle_hidden.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/cfacts.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/cfacts.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/cmdcustomize.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/cmdcustomize.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/combo.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/combo.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/cool_autostart.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/cool_autostart.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/cyclelayouts.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/cyclelayouts.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/decorationhints.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/decorationhints.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/distributetags.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/distributetags.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/dragcfact.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/dragcfact.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/dragmfact.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/dragmfact.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/dwmc.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/dwmc.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patches.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/exresize.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/exresize.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/fakefullscreenclient.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/fakefullscreenclient.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/floatpos.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/floatpos.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/focusadjacenttag.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/focusadjacenttag.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/focusdir.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/focusdir.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/focusmaster.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/focusmaster.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/focusurgent.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/focusurgent.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/fsignal.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/fsignal.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/fullscreen.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/fullscreen.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/include.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/include.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/inplacerotate.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/inplacerotate.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/insets.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/insets.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/ipc.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/ipc/dwm-msg.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/ipc.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/ipc/ipc.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/ipc/IPCClient.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/ipc/IPCClient.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/ipc/ipc.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/ipc/util.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/ipc/util.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/ipc/yajl_dumps.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/ipc/yajl_dumps.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/keymodes.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/keymodes.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/killunsel.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/killunsel.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_bstack.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_bstack.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_bstackhoriz.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_bstackhoriz.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_centeredfloatingmaster.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_centeredfloatingmaster.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_centeredmaster.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_centeredmaster.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_columns.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_columns.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_deck.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_deck.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_facts.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_fibonacci.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_fibonacci.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_flextile-deluxe.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_flextile-deluxe.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_gapplessgrid.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_gapplessgrid.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_grid.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_grid.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_horizgrid.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_horizgrid.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_monocle.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_monocle.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_nrowgrid.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_nrowgrid.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_tile.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/layout_tile.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/maximize.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/maximize.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/moveplace.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/moveplace.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/moveresize.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/moveresize.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/movestack.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/movestack.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/mpdcontrol.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/mpdcontrol.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/nametag.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/nametag.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/nomodbuttons.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/nomodbuttons.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/pertag.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/pertag.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/placemouse.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/placemouse.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/push.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/push.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/push_no_master.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/push_no_master.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/renamed_scratchpads.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/renamed_scratchpads.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/reorganizetags.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/reorganizetags.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/restartsig.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/restartsig.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/riodraw.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/riodraw.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/rotatestack.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/rotatestack.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/roundedcorners.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/roundedcorners.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/scratchpad_alt_1.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/scratchpad_alt_1.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/scratchpad.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/scratchpad.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/seamless_restart.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/seamless_restart.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/selfrestart.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/selfrestart.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/setborderpx.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/setborderpx.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/shiftboth.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/shiftboth.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/shift.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/shift.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/shiftswaptags.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/shiftswaptags.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/shifttag.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/shifttagclients.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/shifttagclients.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/shifttag.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/shiftview.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/shiftviewclients.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/shiftviewclients.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/shiftview.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/sizehints_ruled.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/sizehints_ruled.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/sortscreens.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/sortscreens.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/stacker.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/stacker.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/sticky.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/sticky.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/swallow.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/swallow.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/swapfocus.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/swapfocus.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/swaptags.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/swaptags.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/switchcol.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/switchcol.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/tab.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/tab.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/tagall.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/tagall.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/tagallmon.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/tagallmon.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/tagothermonitor.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/tagothermonitor.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/tagswapmon.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/tagswapmon.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/tapresize.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/tapresize.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/togglefullscreen.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/togglefullscreen.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/transferall.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/transferall.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/transfer.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/transfer.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/unfloatvisible.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/unfloatvisible.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/vanitygaps.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/vanitygaps.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/warp.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/warp.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/winview.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/winview.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/xkb.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/xkb.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/xrdb.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/xrdb.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/zoomswap.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./patch/zoomswap.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./transient.c",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	},
+	{
+		"file": "./util.h",
+		"directory": "/home/shawn/dotfiles.git/main/built/dwm-flexipatch/",
+		"command": "clang -include=dwm.c"
+	}
+]

@@ -1,5 +1,4 @@
 /* See LICENSE file for copyright and license details. */
-#include <X11/XF86keysym.h>
 
 /* appearance */
 #if ROUNDED_CORNERS_PATCH
@@ -383,7 +382,7 @@ static const char *layoutmenu_cmd = "layoutmenu.sh";
 #endif
 
 #define GEN_CMD(ps_name, run) \
-	"sh", "-c", "if [\"\" == \"$(pidof " ps_name ")\"]; then " run "; fi"
+	"sh", "-c", "if [\"\" == \"$(pidof " ps_name ")\"]; then " run "2> /dev/null 1> /dev/null; fi"
 
 
 #if COOL_AUTOSTART_PATCH
@@ -392,7 +391,6 @@ static const char *const autostart[] = {
 	GEN_CMD("xflux",                "xflux -l 0"),                           NULL,
 	GEN_CMD("barrier",              "barrier"),                              NULL,
 	GEN_CMD("greenclip",            "greenclip deamon"),                     NULL,
-	GEN_CMD("eww",                  "eww deamon"),                           NULL,
 	GEN_CMD("kdeconnect-indicator", "kdeconnect-indicator"),                 NULL,
 	GEN_CMD("sxhkd",                "sxhkd -c ~/.config/sxhkd/dwm.sxhkdrc"), NULL,
 	"lastbg",                       NULL,
@@ -607,7 +605,7 @@ static const BarRule barrules[] = {
 	{ -1,        0,     BAR_ALIGN_LEFT,   width_taggrid,            draw_taggrid,           click_taggrid,           NULL,                    "taggrid" },
 	#endif // BAR_TAGGRID_PATCH
 	#if BAR_SYSTRAY_PATCH
-	{  0,        0,     BAR_ALIGN_RIGHT,  width_systray,            draw_systray,           click_systray,           NULL,                    "systray" },
+	{  -1,        0,     BAR_ALIGN_RIGHT,  width_systray,            draw_systray,           click_systray,           NULL,                    "systray" },
 	#endif // BAR_SYSTRAY_PATCH
 	#if BAR_LTSYMBOL_PATCH
 	{ -1,        0,     BAR_ALIGN_LEFT,   width_ltsymbol,           draw_ltsymbol,          click_ltsymbol,          NULL,                    "layout" },
