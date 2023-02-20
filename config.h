@@ -382,17 +382,16 @@ static const char *layoutmenu_cmd = "layoutmenu.sh";
 #endif
 
 #define GEN_CMD(ps_name, run) \
-	"sh", "-c", "if [\"\" == \"$(pidof " ps_name ")\"]; then " run "2> /dev/null 1> /dev/null; fi"
-
+	"sh", "-c", "'pidof " ps_name " run || " run " 2>&1 > /dev/null'", NULL
 
 #if COOL_AUTOSTART_PATCH
 static const char *const autostart[] = {
-	GEN_CMD("picom",                "picom -b --experimental-backend"),      NULL,
-	GEN_CMD("xflux",                "xflux -l 0"),                           NULL,
-	GEN_CMD("barrier",              "barrier"),                              NULL,
-	GEN_CMD("greenclip",            "greenclip deamon"),                     NULL,
-	GEN_CMD("kdeconnect-indicator", "kdeconnect-indicator"),                 NULL,
-	GEN_CMD("sxhkd",                "sxhkd -c ~/.config/sxhkd/dwm.sxhkdrc"), NULL,
+	GEN_CMD("picom",                "picom -b --experimental-backend"),
+	GEN_CMD("xflux",                "xflux -l 0"),
+	GEN_CMD("barrier",              "barrier"),
+	GEN_CMD("greenclip",            "greenclip deamon"),
+	GEN_CMD("kdeconnect-indicator", "kdeconnect-indicator"),
+	GEN_CMD("sxhkd",                "sxhkd -c ~/.config/sxhkd/dwm.sxhkdrc"),
 	"lastbg",                       NULL,
 	"startdwmblocks",               NULL,
 	NULL /* terminate */
@@ -446,7 +445,7 @@ static char *tagicons[][NUMTAGS] =
 		// "1", "2", "3", "4", "5", "6", "7", "8", "9"
 		// "  1₁", "  2", "  3", "  4", "  5", "  6", "  7", "  8", "  9",
 		// "  ₁", "  ₂", "  ₃", "  ₄", "  ₅", "  ₆", "  ₇", "  ₈", "  ₉",
-		"¹ ", "² ", "³ ", "⁴ ", "⁵ ", "⁶ ", "⁷ ", "⁸", "⁹",
+		"¹ ", "² ", "³ ", "⁴ ", "⁵ ", "⁶ ", "⁷ ", "⁸", "⁹",
 		/*"\033[91m¹ \033[0m", "² ", "³ ", "⁴ ", "⁵ ", "⁶ ", "⁷ ", "⁸", "⁹ ",*/
     },
 	[ALTERNATIVE_TAGS]    = { "A", "B", "C", "D", "E", "F", "G", "H", "I" },
@@ -502,15 +501,17 @@ static const Rule rules[] = {
 	RULE(.wintype = "_KDE_NET_WM_WINDOW_TYPE_OVERRIDE", .isfloating = 1)
 	RULE(.wintype = "_KDE_NET_WM_WINDOW_TYPE_OVERRIDE, _NET_WM_WINDOW_TYPE_NORMAL", .isfloating = 1)
 
-	RULE(.class = "Browser",         .tags = 1)
-	RULE(.class = "Firefox",         .tags = 1)
-	RULE(.class = "Google-chrome",   .tags = 1)
-	RULE(.class = "Opera",           .tags = 1)
+	RULE(.class = "St",              .tags = 1)
+	RULE(.class = "st",              .tags = 1)
+	RULE(.class = "terminal",        .tags = 1)
+	RULE(.class = "alacritty",       .tags = 1)
+	RULE(.class = "kitty",           .tags = 1)
+	RULE(.class = "st-256color",     .tags = 1)
 
-	RULE(.class = "St",              .tags = 2)
-	RULE(.class = "st",              .tags = 2)
-	RULE(.class = "terminal",        .tags = 2)
-	RULE(.class = "st-256color",     .tags = 2)
+	RULE(.class = "Browser",         .tags = 2)
+	RULE(.class = "Firefox",         .tags = 2)
+	RULE(.class = "Google-chrome",   .tags = 2)
+	RULE(.class = "Opera",           .tags = 2)
 
 	RULE(.class = "ModernGL",        .tags = 1<<2)
 	RULE(.class = "Emacs",           .tags = 1<<2)
