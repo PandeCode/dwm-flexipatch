@@ -1516,7 +1516,7 @@
  * Xresources. Xresources takes precedence over xrdb.
  * https://dwm.suckless.org/patches/xresources/
  */
-#define XRESOURCES_PATCH 0
+#define XRESOURCES_PATCH 1
 
 /* Simple patch that allows floating windows to be zoomed into the master stack
  * position.
